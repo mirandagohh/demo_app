@@ -1,4 +1,6 @@
 DemoApp::Application.routes.draw do
+  resources :space_cats
+
   #=> browser: "http://mysite.com/products"
   #get 'products' => "products#index"
   # request_type 'path' => controller_name#action

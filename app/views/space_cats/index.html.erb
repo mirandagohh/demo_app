@@ -1,0 +1,33 @@
+<h1>Listing space_cats</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>String</th>
+    <th>Planets visited</th>
+    <th>Integer</th>
+    <th>Planet</th>
+    <th>String</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @space_cats.each do |space_cat| %>
+  <tr>
+    <td><%= space_cat.name %></td>
+    <td><%= space_cat.string %></td>
+    <td><%= space_cat.planets_visited %></td>
+    <td><%= space_cat.integer %></td>
+    <td><%= space_cat.planet %></td>
+    <td><%= space_cat.string %></td>
+    <td><%= link_to 'Show', space_cat %></td>
+    <td><%= link_to 'Edit', edit_space_cat_path(space_cat) %></td>
+    <td><%= link_to 'Destroy', space_cat, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Space cat', new_space_cat_path %>
